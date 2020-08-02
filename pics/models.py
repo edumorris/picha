@@ -5,13 +5,13 @@ class Location(models.Model):
     location = models.CharField(max_length = 50)
 
     def __str__(self):
-        return self.location_name
+        return self.location
 
 class Category(models.Model):
     category = models.CharField(max_length = 30)
 
     def __str__(self):
-        return self.cat_name
+        return self.category
 
 class Images(models.Model):
     image = models.ImageField(upload_to = 'pictorials/')
