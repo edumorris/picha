@@ -18,7 +18,7 @@ class Images(models.Model):
     img_name = models.CharField(max_length = 150)
     img_description = models.CharField(max_length = 1000)
     location = models.ForeignKey(Location , on_delete=models.CASCADE, blank = True)
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
