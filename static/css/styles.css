@@ -1,0 +1,52 @@
+/*-----Global Styling-----*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
+html, body {
+    font-family: 'Red Rose', sans-serif;
+}
+
+body {
+    background: url('https://i.pinimg.com/236x/80/47/e3/8047e3b38393eac9d02d1a4ced537d43--black-wings-desktop-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-----Image display styling-----*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-display {
+    margin: 15px !important;
+    width: 400px !important;
+    max-width: 400px;
+    min-width: 400px;
+    height: 400px !important;
+    max-height: 400px;
+    min-width: 400px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-container .card {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.img-link {
+    color: #0745FF;
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+}

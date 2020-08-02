@@ -7,9 +7,9 @@ from .models import Images
 def index(request):
 
     # Getting images
-    img = 
+    imgs = Images.objects.all().order_by('-id')
 
     title = 'Home'
     
 
-    return render (request, 'index.html', {"title": title})
+    return render (request, 'index.html', {"title": title, "imgs": imgs})

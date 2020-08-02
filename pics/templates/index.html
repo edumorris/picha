@@ -4,12 +4,15 @@
     {{block.super}}
 
     <div class="container-fluid">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-3">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies
-                    the entire horizontal space of its parent.</p>
-            </div>
+        <div class="img-container container">
+            {% for img in imgs %}
+                <div class="card img-display">
+                    <img class="card-img-top img-responsive" src="{{ img.image.url }}" alt="img">
+                    <div class="card-body text-right">
+                        <a href="" class="btn btn-warning img-link">{{ img.img_name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
