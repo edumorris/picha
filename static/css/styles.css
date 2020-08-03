@@ -50,3 +50,25 @@ img {
     min-height: 300px;
     max-height: 300px;
 }
+
+/*-----Search Page-----*/
+.search-locale{
+    display: block;
+}
+
+/*-----Image View-----*/
+.image-view-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+th {
+    color: white;
+}
+
+td {
+    background-color: azure;
+}

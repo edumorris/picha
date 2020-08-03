@@ -2,16 +2,16 @@ from django.db import models
 
 # Create your models here.
 class Location(models.Model):
-    location = models.CharField(max_length = 50)
+    locale = models.CharField(max_length = 50)
 
     def __str__(self):
-        return self.location
+        return self.locale
 
 class Category(models.Model):
-    category = models.CharField(max_length = 30)
+    tag = models.CharField(max_length = 30)
 
     def __str__(self):
-        return self.category
+        return self.tag
 
 class Images(models.Model):
     image = models.ImageField(upload_to = 'pictorials/')
@@ -33,14 +33,20 @@ class Images(models.Model):
     def update_image(self):
         pass
     
-    def get_image_by_id(self):
-        pass
+    @classmethod
+    def get_image_by_id(cls, img_id):
+        picha = cls.objects.get(id = img_id)
+        return picha
     
-    def search_image(self, category):
-        pass
+    @classmethod
+    def search_image(cls, category_term):
+        cats = cls.objects.filter(category__tag__icontains = category_term)
+        return cats
     
-    def filter_by_location(self, location):
-        pass
+    @classmethod
+    def filter_by_location(cls, location_term):
+        loca = cls.objects.filter(location__locale__icontains = location_term)
+        return loca
 
 class Subs(models.Model):
     user_name = models.CharField(max_length = 15)

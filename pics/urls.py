@@ -6,7 +6,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url('^$', views.index, name = "index")
+    url('^$', views.index, name = "index"),
+    url(r'^photo/(\d+)', views.image_view, name = 'imager'),
+    url(r'^search/', views.search_category, name = 'search_category'),
+    url(r'^search/location/', views.search_location, name = 'search_location')
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{block.super}}
+    <head>
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    {% if view_image %}
+        <div class="container image-view-container">
+            <div class="the-image">
+                <img src="{{ view_image.image.url }}" alt="img">
+            </div>
+            <div class="image-details">
+                <table>
+                    <tr>
+                        <th>Image Name:</th>
+                        <td>{{ view_image.img_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Image Description:</th>
+                        <td>{{ view_image.img_description }}</td>
+                    </tr>
+                    <tr>
+                        <th>Location:</th>
+                        <td>{{ view_image.location }}</td>
+                    </tr>
+                    <tr>
+                        <th>Categories:</th>
+                        <td>{{ view_image.category }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date Posted:</th>
+                        <td>{{ view_image.pub_date }}</td>
+                    </tr>
+                </table>
+                <button class="btn"><i class="fas fa-share-alt" style="color: beige;"></i></button>
+            </div>
+        </div>
+    {%else%}
+        <div class="container-fluid">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-3">Image Not Found</h1>
+                  <p class="lead">Try another image</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

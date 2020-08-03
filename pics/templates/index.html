@@ -9,7 +9,7 @@
                 <div class="card img-display">
                     <img class="card-img-top img-responsive" src="{{ img.image.url }}" alt="img">
                     <div class="card-body text-right">
-                        <a href="" class="btn btn-warning img-link">{{ img.img_name }}</a>
+                        <a href="{% url 'imager' img.id %}" class="btn btn-warning img-link">View - {{ img.img_name }}</a>
                     </div>
                 </div>
             {% endfor %}

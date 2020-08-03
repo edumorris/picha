@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pics',
     'bootstrap4',
+    'fontawesome_5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

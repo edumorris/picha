@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{block.super}}
+
+    <div class="container-fluid">
+        <div class="search-locale">
+            <form class="form-inline" style="float: right;" role="search" action="{% url 'search_location' %}">
+                <input class="form-control mr-sm-2" type="text" placeholder="'Search Location'" name="location">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <hr>
+        {% if images %}
+            <h2 class="text-center" style="color:beige">Showing results for {{ message }}</h2>
+        {% else %}
+            <h2 class="text-center" style="color:beige">Nothing Searched</h2>
+        {% endif %}
+        <hr>
+        <div class="img-container container">
+            {% for img in images %}
+                <div class="card img-display">
+                    <img class="card-img-top img-responsive" src="{{ img.image.url }}" alt="img">
+                    <div class="card-body text-right">
+                        <a href="" class="btn btn-warning img-link">{{ img.img_name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
