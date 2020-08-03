@@ -63,12 +63,43 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-height: 100vh;
+    justify-content: center;
+}
+
+.the-image {
+    width: 40%;
+    height: 900px;
+    max-height: 900px;
+    min-height: 900px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.image-details {
+    width: 40%;
+    height: 900px;
+    max-height: 900px;
+    min-height: 900px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 th {
     color: white;
+    text-align: right;
+    padding-right: 5px;
+    box-sizing: border-box;
+    width: 40%;
 }
 
 td {
     background-color: azure;
+    box-sizing: border-box;
+    width: 60%;
+    text-align: center;
 }

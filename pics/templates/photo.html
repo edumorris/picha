@@ -12,7 +12,7 @@
     {% if view_image %}
         <div class="container image-view-container">
             <div class="the-image">
-                <img src="{{ view_image.image.url }}" alt="img">
+                <img class="img-responsive" src="{{ view_image.image.url }}" alt="img">
             </div>
             <div class="image-details">
                 <table>
@@ -37,7 +37,7 @@
                         <td>{{ view_image.pub_date }}</td>
                     </tr>
                 </table>
-                <button class="btn"><i class="fas fa-share-alt" style="color: beige;"></i></button>
+                <button class="btn btn-warning"><i class="fas fa-share-alt" style="color: beige; float: right; margin: 10px;"></i></button>
             </div>
         </div>
     {%else%}
