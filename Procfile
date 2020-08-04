@@ -1,0 +1,1 @@
+web: gunicorn MyPictorial.wsgi --log-file -
