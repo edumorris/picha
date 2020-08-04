@@ -65,13 +65,14 @@ img {
     flex-wrap: wrap;
     max-height: 100vh;
     justify-content: center;
+    top: 60%;
 }
 
 .the-image {
     width: 40%;
-    height: 900px;
-    max-height: 900px;
-    min-height: 900px;
+    height: 80vh;
+    max-height: 80vh;
+    min-height: 80vh;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -80,13 +81,17 @@ img {
 
 .image-details {
     width: 40%;
-    height: 900px;
-    max-height: 900px;
-    min-height: 900px;
+    height: 80vh;
+    max-height: 80vh;
+    min-height: 80vh;
     padding: 20px;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.the-image img {
+    height: 60%;
 }
 
 th {

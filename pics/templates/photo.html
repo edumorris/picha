@@ -37,7 +37,13 @@
                         <td>{{ view_image.pub_date }}</td>
                     </tr>
                 </table>
-                <button class="btn btn-warning"><i class="fas fa-share-alt" style="color: beige; float: right; margin: 10px;"></i></button>
+                <script>
+                    function shareLink() {
+                        window.clipboardData.setData("Text",location.href);
+                        alert('URL copied!');
+                    }
+                </script>
+                <button class="btn btn-warning" onclick="shareLink()"><i class="fas fa-share-alt" style="color: beige; float: right; margin: 10px;"></i></button>
             </div>
         </div>
     {%else%}
